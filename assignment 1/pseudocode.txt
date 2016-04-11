@@ -1,0 +1,18 @@
+Procedure AncestralSampling(nrSamples, bayesianNetwork)
+Input: nrSamples the number of samples that have to be obtained
+       bayesianNetwork = {x1, x2,...xn} the nodes of the bayesianNetwork 
+       ordered so there is no link to a previous node
+1 initialize array Samples with size nrSamples
+2 for k = 1 to nrSamples
+3         generate n random numbers and store them into array Randoms
+4         for each xi from bayesianNetwork
+5             Probability = SigmoidFunction([s1,s2,...sample values from parent nodes of xi])
+6             if Randoms(i) < Probability
+7                 store sample 0 at Samples(k,i)
+8             else store sample 1 at Samples(k,i)
+9 calculate desired marginal probabilities using Samples
+            
+            
+        
+        
+

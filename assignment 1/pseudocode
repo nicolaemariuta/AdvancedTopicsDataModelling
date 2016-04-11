@@ -1,0 +1,33 @@
+{\rtf1\ansi\deff0\deftab480
+
+{\fonttbl
+{\f000 Courier New;}
+{\f001 Courier New;}
+}
+
+{\colortbl
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+}
+
+\f1493315161\fs20\cb3\cf2 \highlight1\cf0 Procedure AncestralSampling(nrSamples, bayesianNetwork)\par
+Input: nrSamples the number of samples that have to be obtained\par
+       bayesianNetwork = \{x1, x2,...xn\} the nodes of the bayesianNetwork \par
+       ordered so there is no link to a previous node\par
+initialize array Samples with size nrSamples\par
+for k = 1 to nrSamples\par
+        generate n random numbers and store them into array Randoms\par
+        for each xi from bayesianNetwork\par
+            Probability = SigmoidFunction([s1,s2,...sample values from parent nodes of xi])\par
+            if Randoms(i) < Probability\par
+                store sample 0 at Samples(k,i)\par
+            else store sample 1 at Samples(k,i)\par
+calculate desired marginal probabilities using Samples\par
+            \par
+            \par
+        \par
+        \par
+\par
+}
